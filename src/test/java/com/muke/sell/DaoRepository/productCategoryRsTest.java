@@ -1,6 +1,8 @@
 package com.muke.sell.DaoRepository;
 
 import com.muke.sell.DAO.ProductCategory;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +29,19 @@ public class productCategoryRsTest {
         ProductCategory productCategory = new ProductCategory("日用品",1);
         System.out.println(productCategory);
         ProductCategoryRs.save(productCategory);
+
+    }
+
+    @Test
+    public void jsonTest(){
+        JSONObject jsonObject = new JSONObject();
+
+        JSONObject jsonObjectUserIDInfo = new JSONObject();
+
+        JSONArray jsonArray = new JSONArray();
+
+        jsonObjectUserIDInfo.put("产品类型", "日用品");
+        jsonObjectUserIDInfo.
 
     }
 
