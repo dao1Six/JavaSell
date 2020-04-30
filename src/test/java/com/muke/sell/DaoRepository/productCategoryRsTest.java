@@ -10,7 +10,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.List;
 import java.util.Optional;
 
 @RunWith(SpringRunner.class)
@@ -42,10 +41,20 @@ public class productCategoryRsTest {
 
         JSONArray jsonArray = new JSONArray();
 
-        int[] list = {1,2,3};
+        String[] arr={"a","b","c"};
         jsonObjectUserIDInfo.put("产品类型", "日用品");
-        jsonObjectUserIDInfo.put("dadasd", list);
-        System.out.println(jsonObjectUserIDInfo);
+        jsonObjectUserIDInfo.put("dadasd", arr);
+        System.out.println("json_______"+jsonObjectUserIDInfo);
+
+    }
+
+    @Test
+    public void jssTest(){
+
+        String[] s = {"","","ddddd"};
+        for (String a:s){
+            System.out.println(a);
+        }
 
     }
 
