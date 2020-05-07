@@ -29,21 +29,21 @@ public class Response<T> {
     /**
      * 状态码 + 成功提示信息
      */
-    public static <T> Response<T> createResponseBySuccess(String msg) {
-        return new Response<>(StatusEnmu.SUCCESS.getCode(),StatusEnmu.SUCCESS.getMsg());
+    public static  Response createResponseBySuccess() {
+        return new Response(StatusEnmu.SUCCESS.getCode(),StatusEnmu.SUCCESS.getMsg());
     }
 
     /**
      * 状态码 + 成功提示信息 + 数据
      */
-    public static <T> Response<T> createResponseBySuccess(String msg, T data) {
-        return new Response<>(StatusEnmu.SUCCESS.getCode(),StatusEnmu.SUCCESS.getMsg());
+    public static <T> Response<T> createResponseBySuccess(T data) {
+        return new Response<>(StatusEnmu.SUCCESS.getCode(),StatusEnmu.SUCCESS.getMsg(),data);
     }
 
     /**
      * 状态码 + 错误信息
      */
-    public static <T> Response<T> createResponseByError(String msg) {
-        return new Response<>(ConstUtils.ResponseCode.ERROR, msg);
+    public static <T> Response<T> createResponseByError() {
+        return new Response<>(StatusEnmu.ERROR.getCode(), StatusEnmu.ERROR.getMsg());
     }
 }
