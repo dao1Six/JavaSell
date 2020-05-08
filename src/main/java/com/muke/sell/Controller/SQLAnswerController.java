@@ -20,7 +20,7 @@ public class SQLAnswerController {
     private SQLAnswerService sqlAnswerService;
 
     @GetMapping("/001")
-    @Cacheable(cacheNames = "answer001",key = "001")
+    @Cacheable(cacheNames = "answer001",key = "123")
     public Response answer001(){
 
         List<Map<String,Object>> mapList = sqlAnswerService.answer001();
