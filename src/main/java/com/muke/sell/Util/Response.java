@@ -4,7 +4,7 @@ import com.muke.sell.Enmu.StatusEnmu;
 import lombok.Data;
 
 @Data
-public class Response<T> {
+public class Response<T>  {
     // 状态码,成功为0,失败为1,也封装成常量类
     private Integer status;
     // 消息,成功消息或者失败消息

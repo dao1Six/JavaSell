@@ -16,6 +16,7 @@ public class SQLAnswerServiceImpl implements SQLAnswerService {
     private JdbcTemplate jdbcTemplate;
 
     @Override
+
     public List<Map<String, Object>> answer001() {
         String sql = "SELECT a.SId,a.CId,a.score AS '01科目成绩',b.score AS '02科目成绩' FROM " +
                 "(SELECT * FROM SC WHERE CId = 01 )AS a, " +

@@ -4,6 +4,7 @@ package com.muke.sell.Controller;
 import com.muke.sell.Service.SQLAnswerService;
 import com.muke.sell.Util.Response;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,7 @@ public class SQLAnswerController {
     private SQLAnswerService sqlAnswerService;
 
     @GetMapping("/001")
+    @Cacheable(cacheNames = "answer001",key = "001")
     public Response answer001(){
 
         List<Map<String,Object>> mapList = sqlAnswerService.answer001();
