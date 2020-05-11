@@ -12,6 +12,6 @@ public class FirstThreadTest implements Runnable {
     public static void main(String[] args) {
         FirstThreadTest firstThreadTest = new FirstThreadTest();
         new Thread(firstThreadTest,"ajhaj").start();
-        new Thread(firstThreadTest,"a3434j").start();
+        new Thread(firstThreadTest,"a34340j").start();
     }
 }
