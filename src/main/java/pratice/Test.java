@@ -2,17 +2,12 @@ package pratice;
 
 public class Test {
 
-    public void test1() {
-        FirstThreadTest firstThreadTest = new FirstThreadTest();
-
-    }
-
 
     public static void main(String[] args) {
-        Test test = new Test();
-        for (int i = 0;i<5;i++){
-            test.test1();
-        }
-
+        Station s = new Station();
+        new Thread(s,"站台4").start();
+        new Thread(s,"站台5").start();
+        new Thread(s,"站台6").start();
+        new Thread(s,"站台7").start();
     }
 }
